@@ -1,0 +1,94 @@
+=========================
+Oauth2 server locale!!
+=========================
+
+Client id: sLOPKaEsCsBhNdsTgQLLIT9YyZUSQoyRumnUrb44P3uDlicYtv51Y1k9BtzU4eHW
+Secret Key: c0xPUEthRXNDc0JoTmRzVGdRTExJVDlZeVpVU1FveVJ1bW5VcmI0NFAzdURsaWNZdHY1MVkxazlCdHpVNGVIVzpwTzZHNkhpdFF3VWVHOE5va29vVFpTSVhIRWVidHhPTmllblNESldpZ1k2emJ5am1yMU9STHJ5cmtubG1XU3ZY
+
+UserName: 4260208F-FC6D-4A3F-8739-61FAF646FA17
+password: b49d92b2487d6649ef05a8fcc57318198bc5e01f6fcacbaf5e527ebf16c9e2c4
+password(unhashed): pwadmin
+
+
+--------------------------------------------------
+POST /oauth/token HTTP/1.1
+Host: localhost:3001
+Content-Type: application/x-www-form-urlencoded
+grant_type: password
+Authorization: Basic c0xPUEthRXNDc0JoTmRzVGdRTExJVDlZeVpVU1FveVJ1bW5VcmI0NFAzdURsaWNZdHY1MVkxazlCdHpVNGVIVzpjMHhQVUV0aFJYTkRjMEpvVG1SelZHZFJURXhKVkRsWmVWcFZVMUZ2ZVZKMWJXNVZjbUkwTkZBemRVUnNhV05aZEhZMU1Wa3hhemxDZEhwVk5HVklWenB3VHpaSE5raHBkRkYzVldWSE9FNXZhMjl2VkZwVFNWaElSV1ZpZEhoUFRtbGxibE5FU2xkcFoxazJlbUo1YW0xeU1VOVNUSEo1Y210dWJHMVhVM1pZ
+Cache-Control: no-cache
+Postman-Token: 1b48f8d8-19ae-483a-2ba2-976ee1a263b5
+
+(body raw)
+grant_type=password&username=4260208F-FC6D-4A3F-8739-61FAF646FA17&password=pwadmin
+
+
+Response example
+{
+    "access_token": "9yfmFxnvWBLkD6R0HMXjJF10cJb8zhKWjzkQTFQZhs4RgfySHEe37gvgM2Xbc9wpeuiMuVrrqqBRRyI0Ta6XZp5aEsOiSjiypkk45id9Puo2wrLu7XEw6fXQqRNmOn639Wgw82Mjo3dMQjOvHjftdsE9XASjhq2rIzvgaaej3lXHOnQrd9Gwk6L5Bq93k0lVLGYta1c0KGjpxg2jeHt20DfkIISmBPsmWre6oIkVk4g6fE1fBbGEodmeQOD94Bc",
+    "refresh_token": "5HdZrXt0Tbs6OPUwA6Kotb5qet6t7EwlnqAGCvoXuirFeyjyiJat4g2sJbz9A1h1fbgW4bkCI2BbvNQIEIhpRP7ZZOWaNp1o59FCy58cTAAxyDtWZHYkBJFLTv04yAlLXdUQP9MHVtfYAf6BwEi3KWfi3k7eqPIZJPy47hAxrQ5i7Si8M1sZTNHMVNe8kP50O294g8fwr6x1FzrJspq9sUj0PWo6LUhGO56XNnLYbGOpQpVRvInQbZBOXABGdWB",
+    "expires_in": 3600,
+    "token_type": "Bearer"
+}
+
+
+----------------------------
+
+GET /users HTTP/1.1
+Host: localhost:3001
+Authorization: Bearer 9yfmFxnvWBLkD6R0HMXjJF10cJb8zhKWjzkQTFQZhs4RgfySHEe37gvgM2Xbc9wpeuiMuVrrqqBRRyI0Ta6XZp5aEsOiSjiypkk45id9Puo2wrLu7XEw6fXQqRNmOn639Wgw82Mjo3dMQjOvHjftdsE9XASjhq2rIzvgaaej3lXHOnQrd9Gwk6L5Bq93k0lVLGYta1c0KGjpxg2jeHt20DfkIISmBPsmWre6oIkVk4g6fE1fBbGEodmeQOD94Bc
+Cache-Control: no-cache
+Postman-Token: 017a187e-8b76-6431-bbe9-afcb164fbe43
+
+Response example
+[
+    {
+        "userId": "4260208F-FC6D-4A3F-8739-61FAF646FA17",
+        "locationId": "",
+        "type": "ADMIN",
+        "firstName": "Admin",
+        "lastName": "Admin",
+        "email": "admin@domain.com",
+        "password": "b49d92b2487d6649ef05a8fcc57318198bc5e01f6fcacbaf5e527ebf16c9e2c4",
+        "lastChangedPassword": null,
+        "enabled": "Yes",
+        "locked": "No",
+        "forcePasswordChange": "No",
+        "created": null,
+        "createdBy": null,
+        "lastUpdate": "2017-10-08T09:17:16.000Z",
+        "lastUpdateBy": null,
+        "gender": null,
+        "dateOfBirth": null,
+        "yearOfStudy": null,
+        "isEmployee": "No",
+        "isStudent": "No",
+        "allowContact": "No"
+    },
+    {
+        "userId": "e33ce889-5221-496b-89a8-f7af68b4bc3b",
+        "locationId": "",
+        "type": "USER",
+        "firstName": "Simple User",
+        "lastName": "McAlliston",
+        "email": "user@domain.com",
+        "password": "user",
+        "lastChangedPassword": null,
+        "enabled": "Yes",
+        "locked": "No",
+        "forcePasswordChange": "No",
+        "created": null,
+        "createdBy": null,
+        "lastUpdate": null,
+        "lastUpdateBy": null,
+        "gender": null,
+        "dateOfBirth": null,
+        "yearOfStudy": null,
+        "isEmployee": "No",
+        "isStudent": "No",
+        "allowContact": "No"
+    }
+]
+
+
+
