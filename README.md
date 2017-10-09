@@ -1,6 +1,7 @@
 # OAUTH2 Server
 
-Authentication server.
+Authentication and Resource Server using SQL Server Database by Fabio Guerrazzi
+
 
 ## Prerequisites
 
@@ -42,3 +43,15 @@ We've captured many of the most useful commands in npm scripts defined in the `p
 
 * `npm start` - runs the compiler and a server at the same time, both in "watch mode".
 * `npm build` - runs grunt and generates a project build in '/build'.
+
+
+
+### SQL Server
+
+* Create Oauth2DB catalong in you SQL Server instance
+* Open \doc\Oauth2DB.sql in your MSSQL, execute it
+
+* `npm start` - start the server on 3001 port
+
+watch \doc\requests.txt in order to make the correct api call in PostMan for authentication test
+
